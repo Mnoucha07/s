@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stayle.css" />
+    <title>Fly with us</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">MonAgence</div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav id="nav">
+        <a href="#">Accueil</a>
+        <a href="serves.html">Services</a>
+        <a href="Login.html">Se connecter</a>
+        <a href="#reserve">Réserver</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Bienvenue chez MonAgence</h1>
+      <p>Voyagez avec nous et découvrez le monde</p>
+      <a href="#reserve" class="btn">Réserver Maintenant</a>
+    </section>
+
+    <section class="services" id="reserve">
+      <h2>Nos Services</h2>
+      <div class="service-list">
+        <a class="service"> Billets d'avion</a>
+        <a href="hotel.html" class="service"> Réservation d'hôtels</a>
+        <a class="service"> Location de voitures</a>
+      </div>
+    </section>
+    <section class="leschaition">
+<ul class="container">
+  <li>
+    <img src="images/paris.jpeg" alt="Photo de Paris" loading="lazy" />
+    <div class="content">
+      <h2>Paris</h2>
+    </div>
+  </li>
+
+  <li>
+    <img src="images/algérie.webp" alt="Photo de l'Algérie" loading="lazy" />
+    <div class="content">
+      <h2>Algérie</h2>
+    </div>
+  </li>
+
+
+  <li>
+    <img src="images/pologne.jpeg" alt="Photo de Pologne" loading="lazy" />
+    <div class="content">
+      <h2>Pologne</h2>
+    </div>
+  </li>
+
+  <li>
+    <img src="images/canada.jpeg" alt="Photo du Canada" loading="lazy" />
+    <div class="content">
+      <h2>Canada</h2>
+    </div>
+  </li>
+
+  <li>
+    <img src="images/italia.jpeg" alt="Photo d'Italie" loading="lazy" />
+    <div class="content">
+      <h2>Italia</h2>
+    </div>
+  </li>
+</ul>
+    </section>
+
+    <section class="reserve" id="reserve">
+      <h2>Réserver avec nous</h2>
+      <form>
+        <div class="input-group">
+          <input type="text" id="name" required />
+          <label for="name">Votre Nom</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required />
+          <label for="email">Votre Email</label>
+        </div>
+        <div class="input-group">
+          <input type="date" id="date" required />
+          <label for="date">Date</label>
+        </div>
+        <button type="submit">Réserver</button>
+      </form>
+    </section>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #2c3e50;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #0078ff;
+}
+
+.hero {
+  height: 90vh;
+  background: url(images/fly.jpg) no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.hero a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  background: #0078ff;
+  color: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2b2f33;
+  color: white;
+}
+
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background: white;
+}
+
+.services h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.service {
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-decoration: none;
+  color: #2b2f33;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  background-color: #0078ff;
+}
+.leschaition {
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-emphasis: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  gap: 10px;
+  transition: 0.3s;
+  flex-direction: row;
+  margin: 10px;
+  background-color: #f8f9fa;
+}
+.container li {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 80px;
+  border-radius: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1.2px solid #2c3e50;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0, 4),
+    -2px -5px 10px rgba(0, 0, 0, 0.1);
+}
+.container li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container li,
+.container li img {
+  transition: 0.3s;
+}
+.container li .content {
+  transition: 1.5s ease;
+}
+.container span {
+  text-align: center;
+  width: 75%;
+}
+.container h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 4px;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.container:hover {
+  gap: 10;
+}
+.container li .content span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 0px;
+  translate: -50%;
+  scale: 0.85;
+  visibility: hidden;
+  opacity: 0;
+}
+.container li:hover {
+  flex: 0 1 260px;
+  scale: 1.1;
+  z-index: 10;
+  opacity: 1;
+}
+
+.container li:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+.container li:hover span {
+  scale: 2;
+  opacity: 10;
+  visibility: visible;
+}
+.reserve {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.reserve h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+.reserve form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+  background: transparent;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #f4f6f9;
+  padding: 0 5px;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 8px;
+  font-size: 1em;
+  color: #0078ff;
+}
+
+.reserve button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  background: #0078ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reserve button:hover {
+  background: #34495e;
+}
+input[type="date"]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #2c3e50;
+    padding: 15px;
+    border-radius: 0px 0px 20px 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    gap: 20px;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  nav.show {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  /* Section تاع المدن */
+  .container {
+    flex-wrap: nowrap; /* خط واحد */
+    overflow-x: auto; /* سكروول أفقي */
+    overflow-y: hidden;
+    gap: 10px;
+    padding: 0; /* مهم: ماكانش padding باش مايتزحزحش البداية */
+    margin: 0; /* مهم: بلا margin على اليسار */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+    scroll-snap-type: x mandatory; /* وقفة أنيقة بين الكروت */
+  }
+
+  .container li {
+    flex: 0 0 auto; /* حجم ثابت */
+    width: 180px; /* تقدر تغيّرها */
+    height: 150px;
+    scroll-snap-align: start; /* يبدأ العنصر واضح من اليسار */
+  }
+  .container li:hover {
+    flex: none;
+    scale: none;
+  }
+
+  /* شريط السكروول (Chrome/Edge/Safari) */
+  .container::-webkit-scrollbar {
+    height: 6px;
+  }
+  .container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+  .container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+  .container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+}

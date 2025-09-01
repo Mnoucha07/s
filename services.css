@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background: url(images/airplane.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #2c3e50;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #0078ff;
+}
+.input-box {
+  background: #2c3e50;
+  padding: 30px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  margin-left: auto;
+}
+.input-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.input-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.groop {
+  position: relative;
+  margin: 20px 0;
+}
+
+.groop input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.groop label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #888;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.groop input:focus + label,
+.groop input:valid + label {
+  top: 15px;
+  left: 8px;
+  font-size: 20px;
+  color: #ffffff;
+  transform: translateY(-35px);
+  background-color: transparent;
+}
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 10px;
+
+  border-radius: 6px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.input-box button {
+  width: 100%;
+  padding: 10px;
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.input-box button:hover {
+  background: #005fcc;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #2c3e50;
+    padding: 15px;
+    border-radius: 0px 0px 20px 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    gap: 20px;
+  }
+
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  nav.show {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  .input-box {
+    margin: auto;
+  }
+}

@@ -1,0 +1,143 @@
+html{
+scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins;
+  background-image: url(images/preview.webp) ;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.input-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  width: 300px;
+}
+.input-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+.input-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.groop {
+  position: relative;
+  margin: 20px 0;
+}
+
+.groop input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.groop label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #888;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.groop input:focus + label,
+.groop input:valid + label {
+  top: 15px;
+  left: 8px;
+  font-size: 20px;
+  color: #0078ff;
+  transform: translateY(-20px);
+}
+.input-box button {
+  width: 100%;
+  padding: 10px;
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.input-box button:hover {
+  background: #005fcc;
+}
+.remember-forget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+}
+.remember-forget label input  {
+  accent-color: #0078ff;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  display: flex;
+}
+.remember-forget label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+.remember-forget label a {
+  justify-content: space-between;
+}
+.remember-forget a {
+  color: #005fcc;
+  text-decoration: none;
+}
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+.register-link {
+  font-size: 14.5px;
+  text-align: center;
+
+  margin: 20px 0 15px;
+}
+
+.register-link a {
+  color: #005fcc;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+ 
+
+  .remember-forget  {
+    align-items: center;
+    align-content: flex-start;
+    gap: 10px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .register-link {
+    font-size: 13px;
+  }
+}
