@@ -80,7 +80,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -300px;
+    
     gap: 10px;
 }
 
@@ -277,4 +277,5 @@ nav a:hover {
 
   .menu-toggle {
     display: block;
+
   }}
